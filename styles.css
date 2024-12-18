@@ -33,6 +33,15 @@ header {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.custom-heading {
+    font-family: 'Waiting On The Bridge', Arial, sans-serif; /* Apply your custom font */
+    font-size: 2.5rem; /* Adjust the size as needed */
+    color: #333; /* Change the color if desired */
+    text-align: left; /* Align text to the left */
+    margin: 20px 0; /* Add margin (top and bottom) */
+    margin-left: 15px; /* Add a left margin */
+}
+
 nav {
     display: flex;
     justify-content: space-between;
