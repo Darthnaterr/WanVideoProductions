@@ -1,228 +1,242 @@
-<html><head><base href="https://wanvideoproductions.com/" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wan Video Productions</title>
+<html>
+  <head>
+    <base href="https://wanvideoproductions.com/" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wan Video Productions</title>
 
-<!----------------------------CSS--------------------------------->
-<style>
-:root {
-  --primary: #5e503f;
-  --secondary: #c6ac8f;
-  --accent: #2C1810;
-  --light: #eae0d5;
-  --dark: #22333b;
-  --darker: #0a0908;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-body {
-  background-color: var(--dark);
-  color: var(--light);
-}
-
-.navbar {
-  background-color: rgba(26, 26, 26, 0.95);
-  padding: 1rem;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-.navbar-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.8rem;
-  color: var(--secondary);
-  text-decoration: none;
-  font-weight: 300;
-}
-
-.logo img {
-    max-height: 60px;
-    width: auto;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
   
-.nav-links a {
-  color: var(--light);
-  text-decoration: none;
-  margin-left: 2rem;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: var(--secondary);
-}
-
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--darker);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-content {
-  text-align: center;
-  z-index: 2;
-  padding: 2rem;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  color: var(--light);
-}
-
-.hero p {
-  font-size: 1.5rem;
-  color: var(--secondary);
-  margin-bottom: 2rem;
-}
-
-.cta-button {
-  background-color: var(--primary);
-  color: var(--light);
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.cta-button:hover {
-  background-color: var(--secondary);
-}
-
-.section {
-  padding: 5rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section h2 {
-  color: var(--light);
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.portfolio-item {
-  position: relative;
-  height: 300px;
-  background-color: var(--accent);
-  overflow: hidden;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.portfolio-item:hover {
-  transform: translateY(-5px);
-}
-
-footer {
-  background-color: var(--darker);
-  color: var(--light);
-  padding: 2rem;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
+  <!----------------------------CSS-START-------------------------------->
+  <style>
+  :root {
+    --primary: #5e503f;
+    --secondary: #c6ac8f;
+    --accent: #4a4a4a;
+    --light: #eae0d5;
+    --dark: #22333b;
+    --darker: #0a0908;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  body {
+    background-color: var(--dark);
+    color: var(--light);
+  }
+  
+  .navbar {
+    background-color: rgba(26, 26, 26, 0.95);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+  
+  .navbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 300;
+  }
+  
+  .logo img {
+      max-height: 60px;
+      width: auto;
+  }
+    
+  .nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--secondary);
+  }
+  
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darker);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    text-align: center;
+    z-index: 2;
+    padding: 2rem;
   }
   
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--light);
   }
   
   .hero p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
   }
-}
-</style>
-
-<!----------------------------HTML--------------------------------->
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <nav class="navbar">
-    <div class="navbar-content">
-      <a href="https://wanvideoproductions.com/" class="logo"><img src="media/Logo/WVP-Light-Alpha.png"></a>
-      <div class="nav-links">
-        <a href="https://wanvideoproductions.com/">Home</a>
-        <a href="https://wanvideoproductions.com/about">About</a>
-        <a href="https://wanvideoproductions.com/services">Services</a>
-        <a href="https://wanvideoproductions.com/contact">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Capturing Your Perfect Moments</h1>
-      <p>Professional wedding videography that tells your unique story</p>
-      <a href="https://wanvideoproductions.com/contact" class="cta-button">Book a Consultation</a>
-    </div>
-  </section>
-
-  <section id="portfolio" class="section">
-    <h2>Featured Films</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item"></div>
-      <div class="portfolio-item"></div>
-      <div class="portfolio-item"></div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2023 Wan Video Productions. All rights reserved.</p>
-  </footer>
-
-
-<!----------------------------JAVASCRIPT--------------------------------->
-
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Navbar background change on scroll
-  window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-      navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.98)';
-      navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
-    } else {
-      navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
-      navbar.style.boxShadow = 'none';
+  
+  .cta-button {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--secondary);
+  }
+  
+  .section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section h2 {
+    color: var(--light);
+  }
+  
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .portfolio-item {
+    position: relative;
+    height: 300px;
+    background-color: var(--accent);
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .portfolio-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  footer {
+    background-color: var(--darker);
+    color: var(--light);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
     }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+    }
+  }
+  </style>
+  
+  <!----------------------------CSS-END-------------------------------->
+  
+</head>
+  
+  <!----------------------------HTML-START--------------------------------> 
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-content">
+        <a href="https://wanvideoproductions.com/" class="logo"><img src="media/Logo/WVP-Light-Alpha.png"></a>
+        <div class="nav-links">
+          <a href="https://wanvideoproductions.com/">Home</a>
+          <a href="https://wanvideoproductions.com/about">About</a>
+          <a href="https://wanvideoproductions.com/services">Services</a>
+          <a href="https://wanvideoproductions.com/contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+  
+    <section class="hero">
+      <video autoplay loop muted playsinline id="bg-video">
+        <source src="media/background-video.mp4" type="video/mp4">
+    </video>
+      <div class="hero-content">
+        <h1>Capturing Your Perfect Moments</h1>
+        <p>Professional wedding videography that tells your unique story</p>
+        <a href="https://wanvideoproductions.com/contact" class="cta-button">Book a Consultation</a>
+      </div>
+    </section>
+  
+    <section id="portfolio" class="section">
+      <h2>Featured Films</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item"></div>
+        <div class="portfolio-item"></div>
+        <div class="portfolio-item"></div>
+      </div>
+    </section>
+  
+    <footer>
+      <p>&copy; 2023 Wan Video Productions. All rights reserved.</p>
+    </footer>
+  
+  
+  <!----------------------------HTML-END-------------------------------->
+
+  <!----------------------------JAVASCRIPT-START-------------------------------->
+  
+  
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Navbar background change on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.98)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+      } else {
+        navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
+        navbar.style.boxShadow = 'none';
+      }
+    });
   });
-});
-</script>
-</body>
-</html>
+  </script>
+
+  <!----------------------------JAVASCRIPT-END-------------------------------->
+
+  </body>
+  </html>
