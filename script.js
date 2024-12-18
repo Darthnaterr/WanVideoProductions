@@ -1,4 +1,5 @@
-/* Reset and base styles */
+// Reset and base styles
+/*
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@ body {
     background-color: #000000;
 }
 
-/* Header styles */
+// Header styles
 header {
     position: fixed;
     width: 100%;
@@ -46,7 +47,7 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Hero section styles */
+// Hero section styles
 .hero {
     position: relative;
     height: 100vh;
@@ -95,7 +96,7 @@ nav ul li a {
     background-color: #e0e0e0;
 }
 
-/* Featured Work section styles */
+// Featured Work section styles
 #featured-work {
     padding: 4rem 1rem;
 }
@@ -140,7 +141,7 @@ nav ul li a {
     opacity: 1;
 }
 
-/* Testimonial section styles */
+// Testimonial section styles
 #testimonial {
     background-color: #1a1a1a;
     padding: 4rem 1rem;
@@ -161,7 +162,7 @@ blockquote {
     font-weight: bold;
 }
 
-/* About section styles */
+// About section styles
 #about {
     padding: 4rem 1rem;
 }
@@ -192,7 +193,7 @@ blockquote {
     margin-bottom: 1rem;
 }
 
-/* Contact section styles */
+// Contact section styles
 #contact {
     padding: 4rem 1rem;
 }
@@ -231,14 +232,14 @@ blockquote {
     background-color: #e0e0e0;
 }
 
-/* Footer styles */
+// Footer styles
 footer {
     text-align: center;
     padding: 1rem;
     background-color: #1a1a1a;
 }
 
-/* Responsive design */
+// Responsive design
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -256,3 +257,5 @@ footer {
         font-size: 1rem;
     }
 }
+
+*/
