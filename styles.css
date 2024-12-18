@@ -88,6 +88,11 @@ nav ul li a {
     object-fit: cover;
 }
 
+.hero-content h1,
+.hero-content p {
+    font-family: 'Waiting On The Bridge', Arial, sans-serif; /* Apply the custom font to specific elements */
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
