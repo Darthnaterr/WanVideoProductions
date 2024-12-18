@@ -12,6 +12,12 @@
     box-sizing: border-box;
 }
 
+h1 {
+    font-family: 'YourCustomFont', Arial, sans-serif; /* Apply your custom font with fallbacks */
+    font-size: 2.5rem; /* Adjust the size as needed */
+    color: #333; /* Change the color if desired */
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
