@@ -1,94 +1,213 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wan Video Productions</title>
-    <link rel="stylesheet" href="styles.css">
+<html><head><base href="https://wanvideoproductions.com/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wan Video Productions</title>
+<style>
+:root {
+  --primary: #6B5343;
+  --secondary: #8B7355;
+  --accent: #2C1810;
+  --light: #F5F1EE;
+  --dark: #1A1A1A;
+  --darker: #121212;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.navbar {
+  background-color: rgba(26, 26, 26, 0.95);
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.nav-links a {
+  color: var(--light);
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darker);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--light);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary);
+}
+
+.section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  color: var(--light);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.portfolio-item {
+  position: relative;
+  height: 300px;
+  background-color: var(--accent);
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  background-color: var(--darker);
+  color: var(--light);
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="media/Logo/WVP-Light-Alpha.png" alt="Wan Video Productions Logo">
-            </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="https://wanvideoproductions.com/" class="logo">Wan Video Productions</a>
+      <div class="nav-links">
+        <a href="https://wanvideoproductions.com/">Home</a>
+        <a href="https://wanvideoproductions.com/about">About</a>
+        <a href="https://wanvideoproductions.com/services">Services</a>
+        <a href="https://wanvideoproductions.com/contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <main>
-        <section id="home" class="hero">
-            <video autoplay loop muted playsinline id="bg-video">
-                <source src="media/background-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="hero-content">
-                <h1 class="custom-heading">Wan Video Productions</h1>
-                <p>Wedding videography that tells your unique story</p>
-                <a href="#contact" class="cta-button">Book Now</a>
-            </div>
-        </section>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Capturing Your Perfect Moments</h1>
+      <p>Professional wedding videography that tells your unique story</p>
+      <a href="https://wanvideoproductions.com/contact" class="cta-button">Book a Consultation</a>
+    </div>
+  </section>
 
-                <section id="featured-work">
-            <h2>Featured Work</h2>
-            <div class="video-grid">
-                <div class="video-item">
-                    <img src="featured-1.jpg" alt="Featured video 1">
-                    <div class="overlay">Play Video</div>
-                </div>
-                <div class="video-item">
-                    <img src="featured-2.jpg" alt="Featured video 2">
-                    <div class="overlay">Play Video</div>
-                </div>
-                <div class="video-item">
-                    <img src="featured-3.jpg" alt="Featured video 3">
-                    <div class="overlay">Play Video</div>
-                </div>
-            </div>
-        </section>
+  <section id="portfolio" class="section">
+    <h2>Featured Films</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item"></div>
+      <div class="portfolio-item"></div>
+      <div class="portfolio-item"></div>
+    </div>
+  </section>
 
-        <section id="testimonial">
-            <h2>What Our Clients Say</h2>
-            <blockquote>
-                "wan video productions captured our wedding day perfectly. The attention to detail and storytelling in our video was beyond our expectations."
-            </blockquote>
-            <p class="client">- Sarah & John</p>
-        </section>
+  <footer>
+    <p>&copy; 2023 Wan Video Productions. All rights reserved.</p>
+  </footer>
 
-        <section id="about">
-            <h2>About Wan Video Productions</h2>
-            <div class="about-content">
-                <img src="about-image.jpg" alt="Wan Video Productions team">
-                <div class="about-text">
-                    <p>At Wan Video Productions, we are passionate about capturing the most beautiful and emotional moments of your wedding day. Our team of experienced videographers combines artistic vision with technical expertise to create stunning wedding films that you'll cherish for a lifetime.</p>
-                    <p>We believe that every couple has a unique story to tell, and we're dedicated to bringing that story to life through our cinematic approach to wedding videography. From the nervous excitement of getting ready to the joyous celebration on the dance floor, we'll be there to document every special moment.</p>
-                    <p>Let us help you relive your wedding day over and over again with a beautifully crafted wedding film that captures the essence of your love story.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2023 wan video productions. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Navbar background change on scroll
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.98)';
+      navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+    } else {
+      navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
+      navbar.style.boxShadow = 'none';
+    }
+  });
+});
+</script>
 </body>
 </html>
-
