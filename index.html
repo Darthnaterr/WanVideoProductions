@@ -96,8 +96,18 @@
       padding-top: 42.5%; /* 2.35:1 Aspect Ratio (1 / 2.35 = 0.4255) */
       overflow: hidden; /* Hide overflow */
   }
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto; /* Maintain aspect ratio */
+    height: 100%; /* Fill the height of the wrapper */
+    transform: translate(-50%, -50%); /* Center the video */
+    object-fit: cover; /* Cover the area */
+}
     
-    #bg-video {
+   /* #bg-video {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -107,7 +117,7 @@
       height: auto;
       transform: translateX(-50%) translateY(-50%);
       object-fit: cover;
-  }
+  }*/
 
   .hero-content {
     text-align: center;
