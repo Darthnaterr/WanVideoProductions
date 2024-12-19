@@ -102,6 +102,23 @@
       object-fit: cover;
   }
 
+.overlay {
+    position: absolute; /* Position overlays absolutely */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+}
+
+.overlay.top {
+    top: 0; /* Align to the top */
+    height: 30%; /* Adjust height as needed */
+}
+
+.overlay.bottom {
+    bottom: 0; /* Align to the bottom */
+    height: 30%; /* Adjust height as needed */
+}
+    
   .hero-content {
     text-align: center;
     z-index: 2;
@@ -215,6 +232,8 @@
         <video autoplay loop muted playsinline id="bg-video">
           <source src="media/background-video.mp4" type="video/mp4">
         </video>
+        <div class="overlay top"></div>
+        <div class="overlay bottom"></div>
       </div>
       <div class="hero-content">
         <h1>Wan Video Productions</h1>
