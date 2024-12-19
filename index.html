@@ -89,7 +89,14 @@
     position: relative;
     overflow: hidden;
   }
-  
+
+  .video-wrapper {
+      position: relative;
+      width: 100%; /* Full width of the container */
+      padding-top: 42.5%; /* 2.35:1 Aspect Ratio (1 / 2.35 = 0.4255) */
+      overflow: hidden; /* Hide overflow */
+  }
+    
     #bg-video {
       position: absolute;
       top: 50%;
@@ -211,9 +218,11 @@
     </nav>
   
     <section class="hero">
-      <video autoplay loop muted playsinline id="bg-video">
-        <source src="media/background-video.mp4" type="video/mp4">
-    </video>
+      <div class="video-wrapper">  
+        <video autoplay loop muted playsinline id="bg-video">
+          <source src="media/background-video.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="hero-content">
         <h1>Wan Video Productions</h1>
         <p>Professional wedding videography that tells your unique story</p>
