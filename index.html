@@ -231,9 +231,22 @@ html {
     }
 
   @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
+.nav-links {
+    display: flex; /* Use flexbox to arrange links horizontally */
+    align-items: center; /* Center items vertically */
+}
+    
+  .nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--secondary);
+  }
     
     .hero h1 {
       font-size: 2.5rem;
