@@ -239,64 +239,6 @@ html {
     }
   }
   
-  @media (max-width: 768px) {
-    .nav-links {
-        display: flex; /* Change to flex to allow for better alignment */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute; /* Position it absolutely */
-        top: 60px; /* Adjust based on navbar height */
-        left: 0;
-        right: 0;
-        background-color: rgba(26, 26, 26, 0.95); /* Background for dropdown */
-        padding: 1rem; /* Add padding */
-        display: none; /* Initially hide */
-    }
-
-    .nav-links.active {
-        display: flex; /* Show when active */
-    }
-
-    .navbar-content {
-        justify-content: space-between; /* Keep space between logo and links */
-    }
-
-    .nav-links a {
-        margin: 0.5rem 0; /* Adjust margin for vertical spacing */
-        font-size: 1.2rem; /* Slightly larger font for readability */
-    }
-
-    .hero h1 {
-        font-size: 3rem; /* Adjust font size for mobile */
-    }
-
-    .hero p {
-        font-size: 1.2rem; /* Adjust font size for mobile */
-    }
-
-    .cta-button {
-        padding: 0.8rem 1.5rem; /* Adjust padding for mobile */
-        font-size: 1rem; /* Adjust font size for mobile */
-    }
-
-    .portfolio-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
-    }
-
-    footer {
-        flex-direction: column; /* Stack footer items vertically */
-        text-align: center; /* Center text */
-    }
-
-    .footer-content {
-        flex-direction: column; /* Stack footer content vertically */
-        align-items: center; /* Center items */
-    }
-
-    .social-links {
-        justify-content: center; /* Center social links */
-    }
-}
-  
   </style>
   
   <!----------------------------CSS-END-------------------------------->
@@ -316,7 +258,6 @@ html {
           <a href="https://wanvideoproductions.com/contact">Contact</a> -->
           <a href="#one"><p>About</p></a>
           <a href="#two"><p>Contact</p></a>
-          <button class="mobile-nav-toggle">Menu</button>
           
         </div>
       </div>
@@ -404,10 +345,7 @@ html {
       }
     });
   });
-    document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active'); // Toggle the active class
-});
+
   </script>
 
   <!----------------------------JAVASCRIPT-END-------------------------------->
