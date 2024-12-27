@@ -15,10 +15,26 @@
         --primary: #5e503f;
         --secondary: #c6ac8f;
         --accent: #4a4a4a;
-        --light: #ffff;
+        --light: #EEEEEE;
         --dark: #EEEEEE;
         --darker: #0a0908;
+  		--logo-color: var(--light);
+  		--logo-hover-color: var(--secondary);
     }
+
+	.logo svg {
+  	fill: var(--logo-color);
+  	transition: fill 0.3s ease;
+	}
+
+	.logo:hover svg {
+  	fill: var(--logo-hover-color);
+	}
+
+	/* Specific style for the hero logo if needed */
+	.hero-logo svg {
+  	fill: var(--logo-color);
+	}
 
     html {
         scroll-behavior: smooth;
@@ -328,7 +344,7 @@
         <nav class="navbar" aria-label="Main navigation">
             <div class="navbar-content">
                 <a href="https://wanvideoproductions.com/" class="logo">
-                    <img src="media/Logo/WVP-Light-Alpha.svg" alt="Wan Video Productions Logo">
+                    <img src="media/Logo/WVP-Light-Alpha.svg" alt="Wan Video Productions Logo" class="logo-svg">
                 </a>
                 
             	<button class="hamburger" aria-label="Menu">
@@ -359,11 +375,11 @@
                 <div class="overlay bottom"></div>
             </div>
             <div class="hero-content">
-                <div class="hero-title-container"> <img src="media/Logo/WVP-Light-Alpha.svg" alt="Wan Video Productions Logo" class="hero-logo">
+                <div class="hero-title-container"> 
+                	<img src="media/Logo/WVP-Light-Alpha.svg" alt="Wan Video Productions Logo" class="hero-logo logo-svg">
                 	<h1>Video Productions</h1>
                 </div>
                 <p>Capturing Moments for Timeless Memories</p>
-                <!-- <a href="https://wanvideoproductions.com/contact" class="cta-button">Packages</a> -->
             </div>
         </section>
 
