@@ -136,13 +136,28 @@
     text-align: left;
     z-index: 2;
     padding: 2rem;
+    display: flex; /* Enable flexbox for layout */
+    flex-direction: column; /* Stack logo and text vertically by default */
+    align-items: flex-start; /* Align items to the left */    
+  }
+  
+  .hero-title-container {
+    display: flex; /* Arrange logo and h1 horizontally */
+    align-items: center; /* Vertically center logo and h1 */
+    margin-bottom: 1rem; /* Add spacing below the title */
+  }
+  
+  .hero-logo {
+    max-height: 300px; /* Adjust as needed */
+    margin-right: 1rem; /* Space between logo and text */
+    width: auto;
   }
   
   .hero h1 {
     font-family: 'Waiting On The Bridge', cursive, sans-serif;
     font-size: 5rem;
-    margin-bottom: 1rem;
     color: var(--light);
+    margin: 0;
     /* transform: translateX(-85%) translateY(-50%);*/
   }
   
@@ -254,7 +269,11 @@
         .hero h1 {
         font-size: 2.5rem;
     }
-        
+    
+    	.hero-logo {
+        max-height: 75px;
+    }
+    
         .hero p {
         font-size: 1.2rem;
     }
@@ -340,7 +359,9 @@
                 <div class="overlay bottom"></div>
             </div>
             <div class="hero-content">
-                <h1>Wan Video Productions</h1>
+                <div class="hero-title-container"> <img src="media/Logo/WVP-Light-Alpha.png" alt="Wan Video Productions Logo" class="hero-logo">
+                	<h1>Video Productions</h1>
+                </div>
                 <p>Capturing Moments for Timeless Memories</p>
                 <!-- <a href="https://wanvideoproductions.com/contact" class="cta-button">Packages</a> -->
             </div>
