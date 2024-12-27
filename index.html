@@ -1,44 +1,45 @@
-<html>
-  <head>
-  <base href="https://wanvideoproductions.com/" />
-  <link rel="icon" href="media/Logo/WVP-Light-Alpha.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wan Video Productions</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="https://wanvideoproductions.com/" />
+    <link rel="icon" href="media/Logo/WVP-Light-Alpha.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wan Video Productions - Professional video production services">
+    <title>Wan Video Productions</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 
-    
-  <!----------------------------CSS-START-------------------------------->
-  <style>
-  :root {
-    --primary: #5e503f;
-    --secondary: #c6ac8f;
-    --accent: #4a4a4a;
-    --light: #eae0d5;
-    --dark: #423924;
-    --darker: #0a0908;
-  }
+    <style>
+    :root {
+        --primary: #5e503f;
+        --secondary: #c6ac8f;
+        --accent: #4a4a4a;
+        --light: #eae0d5;
+        --dark: #423924;
+        --darker: #0a0908;
+    }
 
-html {
-    scroll-behavior: smooth;
-}
+    html {
+        scroll-behavior: smooth;
+    }
     
-  @font-face {
-      font-family: 'Waiting On The Bridge'; // Name of the font
-      src: url('/media/fonts/Waiting-on-the-Bridge.woff') format('truetype'), // Modern browsers
-      font-weight: normal; // Specify the weight
-      font-style: normal; // Specify the style
-  }
+    @font-face {
+        font-family: 'Waiting On The Bridge';
+        src: url('/media/fonts/Waiting-on-the-Bridge.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Improved font loading */
+    }
     
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Cormorant Garamond', serif;
-  }
-  
-  body {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Cormorant Garamond', serif;
+    }
+    
+    body {
     background-color: var(--dark);
     color: var(--light);
   }
@@ -229,90 +230,65 @@ html {
         height: 24px;
         fill: var(--light);
     }
-
-  @media (max-width: 768px) {
-.nav-links {
-    display: flex; /* Use flexbox to arrange links horizontally */
-    align-items: center; /* Center items vertically */
-}
     
-  .nav-links a {
-    color: var(--light);
-    text-decoration: none;
-    margin-left: 2rem;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: var(--secondary);
-  }
-    
-    .hero h1 {
-      font-size: 2.5rem;
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+        }
     }
-    
-    .hero p {
-      font-size: 1.2rem;
-    }
-  }
-  
-  </style>
-  
-  <!----------------------------CSS-END-------------------------------->
-  
+    </style>
 </head>
-  
-  <!----------------------------HTML-START--------------------------------> 
 
-  <body>
-    <div class="page" id="home">
-    <nav class="navbar">
-      <div class="navbar-content">
-        <a href="https://wanvideoproductions.com/" class="logo"><img src="media/Logo/WVP-Light-Alpha.png"></a>
-        <div class="nav-links">
-          <a href="#home">Home</a>
-        <!--  <a href="https://wanvideoproductions.com/about">About</a>
-          <a href="https://wanvideoproductions.com/services">Services</a>
-          <a href="https://wanvideoproductions.com/contact">Contact</a> -->
-          <a href="#one"><p>About</p></a>
-          <a href="#two"><p>Contact</p></a>
-          
-        </div>
-      </div>
-    </nav>
-    </div>
-  
-    <section class="hero">
-      <div class="video-wrapper">  
-        <video autoplay loop muted playsinline id="bg-video">
-          <source src="media/background-video.mp4" type="video/mp4">
-        </video>
-        <div class="overlay top"></div>
-        <div class="overlay bottom"></div>
-      </div>
-      <div class="hero-content">
-        <h1>Wan Video Productions</h1>
-        <p>Capturing Moments for Timeless Memories</p>
-       <!-- <a href="https://wanvideoproductions.com/contact" class="cta-button">Packages</a> -->
-      </div>
-    </section>
-<div class="page" id="one">
-  <p style="line-height: 20;"> </p>
-    <section id="about" class="section">
-      <h2>About</h2>
-    </section>
-  <p style="line-height: 50;">This is a paragraph with increased line height.</p>
-</div>
-    
-<div class="page" id="two">
-  <p style="line-height: 20;"> </p>
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:WanVideoProductions@gmail.com" style="color: var(--secondary);">WanVideoProductions@gmail.com</a></p>
-    </section>
-    <p style="line-height: 50;">This is a paragraph with increased line height.</p>
-</div>
+<body>
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="navbar-content">
+                <a href="https://wanvideoproductions.com/" class="logo">
+                    <img src="media/Logo/WVP-Light-Alpha.png" alt="Wan Video Productions Logo">
+                </a>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#one">About</a>
+                    <a href="#two">Contact</a>
+                    <!--  <a href="https://wanvideoproductions.com/about">About</a>
+          			<a href="https://wanvideoproductions.com/services">Services</a>
+          			<a href="https://wanvideoproductions.com/contact">Contact</a> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="video-wrapper">  
+                <video autoplay loop muted playsinline id="bg-video" aria-hidden="true">
+                    <source src="media/background-video.mp4" type="video/mp4">
+                </video>
+                <div class="overlay top"></div>
+                <div class="overlay bottom"></div>
+            </div>
+            <div class="hero-content">
+                <h1>Wan Video Productions</h1>
+                <p>Capturing Moments for Timeless Memories</p>
+                <!-- <a href="https://wanvideoproductions.com/contact" class="cta-button">Packages</a> -->
+            </div>
+        </section>
+
+        <section id="one" class="section" aria-label="About Us">
+            <h2>About</h2>
+            <p style="line-height: 50;">Add your About Section Here</p>
+        </section>
+        
+        <section id="two" class="section" aria-label="Contact Information">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:WanVideoProductions@gmail.com" style="color: var(--secondary);">WanVideoProductions@gmail.com</a></p>
+        	<p style="line-height: 50;">This is a paragraph with increased line height.</p>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-content">
@@ -343,32 +319,26 @@ html {
             </div>
         </div>
     </footer>
-  
-  
-  <!----------------------------HTML-END-------------------------------->
 
-  <!----------------------------JAVASCRIPT-START-------------------------------->
-  
-  
-  
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Navbar background change on scroll
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.98)';
-        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
-      } else {
-        navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
-        navbar.style.boxShadow = 'none';
-      }
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.querySelector('.navbar');
+        
+        // Use throttling for better performance
+        let ticking = false;
+        
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    const shouldBeTransparent = window.scrollY <= 50;
+                    navbar.style.backgroundColor = `rgba(26, 26, 26, ${shouldBeTransparent ? '0.95' : '0.98'})`;
+                    navbar.style.boxShadow = shouldBeTransparent ? 'none' : '0 2px 10px rgba(0,0,0,0.2)';
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
     });
-  });
-
-  </script>
-
-  <!----------------------------JAVASCRIPT-END-------------------------------->
-
-  </body>
-  </html>
+    </script>
+</body>
+</html>
