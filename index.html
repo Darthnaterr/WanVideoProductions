@@ -26,10 +26,12 @@
     
     @font-face {
         font-family: 'Waiting On The Bridge';
-        src: url('/media/fonts/Waiting-on-the-Bridge.woff') format('woff');
+        src: url('/media/fonts/Waiting-on-the-Bridge.woff2') format('woff2'),
+         	url('/media/fonts/Waiting-on-the-Bridge.woff') format('woff'),
+         	url('/media/fonts/Waiting-on-the-Bridge.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
-        font-display: swap; /* Improved font loading */
+        font-display: swap;
     }
     
     * {
@@ -137,7 +139,7 @@
   }
   
   .hero h1 {
-    font-family: 'Waiting On The Bridge', sans-serif;
+    font-family: 'Waiting On The Bridge', cursive, sans-serif;
     font-size: 5rem;
     margin-bottom: 1rem;
     color: var(--light);
