@@ -8,8 +8,16 @@
     <meta name="description" content="Wan Video Productions - Professional video production services">
     <title>Wan Video Productions</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
+    <!--Barlow, Bodoni Moda, Italiana, Prata, Raleway, Cormorant Garamond, Nixie One, Lato-->
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Italiana&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nixie+One&family=Prata&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    
+    
+    
+    
     <style>
     :root {
         --secondary: #31363F;
@@ -38,9 +46,9 @@
         scroll-behavior: smooth;
     }
 
-.spacer-sm { height: 10px; }
-.spacer-md { height: 20px; }
-.spacer-lg { height: 40px; }
+.spacer-sm { height: 50px; }
+.spacer-md { height: 100px; }
+.spacer-lg { height: 500px; }
     
     @font-face {
         font-family: 'Waiting On The Bridge';
@@ -56,13 +64,26 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Cormorant Garamond', serif;
+        /*font-family: 'Lato', sans-serif;
+        font-weight: 100;*/
     }
     
     body {
     background-color: var(--dark);
     color: var(--light);
+	font-family: 'Italiana', serif;
+    /*font-family: 'Lato', sans-serif;*/
+    font-weight: 100;
   }
+  
+  	h1 {
+    	font-family: 'Waiting On The Bridge', serif;
+	}
+	
+    h2 {
+    	font-family: 'Waiting On The Bridge', serif;
+        font-size: 4rem;
+	}
   
   .navbar {
     background-color: transparent !important;
@@ -231,6 +252,7 @@
   
   .section h2 {
     color: var(--dark);
+    font-family: 'Waiting On The Bridge', cursive, sans-serif;
   }
   
   .portfolio-grid {
@@ -411,15 +433,18 @@
 
         <section id="one" class="about-section" aria-label="About Us">
             <h2>About</h2>
-            <p>Don't worry. This section will be much more exciting once the website is finished.</p>
             <div class="spacer-sm"></div>
+            <p>Don't worry. This section will be much more exciting once the website is finished.</p>
+            <div class="spacer-lg"></div>
 	</section>
         
         <section id="two" class="contact-section" aria-label="Contact Information">
             <h2>Contact</h2>
+            <div class="spacer-sm"></div>
             <p>Email: <a href="mailto:WanVideoProductions@gmail.com" style="color: var(--secondary);">WanVideoProductions@gmail.com</a></p>
+            <div class="spacer-sm"></div>
         	<p>Maybe I'll add some cool graphics here instead if the same old boring contact form.</p>
-		<div class="spacer-sm"></div>
+		<div class="spacer-lg"></div>
         </section>
     </main>
 
