@@ -21,7 +21,7 @@
     <style>
     :root {
         --secondary: #31363F;
-        --accent: #76ABAE;        
+        --accent: #76ABAE;
         --light: #EEEEEE;
         --dark: #1a1a1a;
   		--logo-color: var(--light);
@@ -71,9 +71,10 @@
     body {
     background-color: var(--dark);
     color: var(--light);
-	font-family: 'Italiana', serif;
-    /*font-family: 'Lato', sans-serif;*/
+	/*font-family: 'Italiana', serif;*/
+    font-family: 'Lato', sans-serif;
     font-weight: 100;
+    overflow-x: hidden;
   }
   
   	h1 {
@@ -244,8 +245,7 @@
     }  
   
     .section-a {
-    	background-color: var(--light);
-    	color: var(--dark);
+    	background-color: var(--secondary);
   }  
   
     .section-b {
@@ -253,8 +253,7 @@
   }
   
     .section-c {
-    	background-color: var(--accent);
-        color: var(--dark);
+    	background-color: var(--secondary);
   }
   
   .section h2 {
@@ -448,12 +447,14 @@
         
         <section id="two" class="section-b" aria-label="Services">
         	<h2>Services</h2>
-            <div class="spacer-sm"></div>            
+            <div class="spacer-sm"></div>
+        	<p>Wedding Videos. I like doing all kinds of videos but I'm trying to focus here.</p>
+			<div class="spacer-lg"></div>            
         </section>
         <section id="three" class="section-c" aria-label="Contact Information">
 			<h2>Contact</h2>
             <div class="spacer-sm"></div>
-            <p>Email: <a href="mailto:WanVideoProductions@gmail.com" style="color: var(--secondary);">WanVideoProductions@gmail.com</a></p>
+            <p>Email: <a href="mailto:WanVideoProductions@gmail.com" style="color: var(--light);">WanVideoProductions@gmail.com</a></p>
             <div class="spacer-sm"></div>
         	<p>Maybe I'll add some cool graphics here instead if the same old boring contact form.</p>
 			<div class="spacer-lg"></div>
