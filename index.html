@@ -226,14 +226,16 @@
     background-color: var(--secondary);
   }
   
-  .about-section,
-  .contact-section {
+  .section-a,
+  .section-b,
+  .section-c {
         width: 100%;
         padding: 5rem 0; /* Remove horizontal padding */
     }
   
-  .about-section > *,
-  .contact-section > * {
+  .section-a > *,
+  .section-b > *,
+  .section-c > * {
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
@@ -241,13 +243,18 @@
         padding-right: 2rem;
     }  
   
-    .about-section {
+    .section-a {
+    	background-color: var(--light);
+    	color: var(--dark);
+  }  
+  
+    .section-b {
     	background-color: var(--secondary);
   }
   
-    .contact-section {
-    	background-color: var(--light);
-    	color: var(--dark);
+    .section-c {
+    	background-color: var(--accent);
+        color: var(--dark);
   }
   
   .section h2 {
@@ -404,7 +411,8 @@
                 <div class="nav-links">
                     <a href="#home">Home</a>
                     <a href="#one">About</a>
-                    <a href="#two">Contact</a>
+                    <a href="#two">Service</a>
+                    <a href="#three">Contact</a>
                     <!--  <a href="https://wanvideoproductions.com/about">About</a>
           			<a href="https://wanvideoproductions.com/services">Services</a>
           			<a href="https://wanvideoproductions.com/contact">Contact</a> -->
@@ -431,20 +439,24 @@
             </div>
         </section>
 
-        <section id="one" class="about-section" aria-label="About Us">
+        <section id="one" class="section-a" aria-label="About Us">
             <h2>About</h2>
             <div class="spacer-sm"></div>
             <p>Don't worry. This section will be much more exciting once the website is finished.</p>
             <div class="spacer-lg"></div>
 	</section>
         
-        <section id="two" class="contact-section" aria-label="Contact Information">
-            <h2>Contact</h2>
+        <section id="two" class="section-b" aria-label="Services">
+        	<h2>Services</h2>
+            <div class="spacer-sm"></div>            
+        </section>
+        <section id="three" class="section-c" aria-label="Contact Information">
+			<h2>Contact</h2>
             <div class="spacer-sm"></div>
             <p>Email: <a href="mailto:WanVideoProductions@gmail.com" style="color: var(--secondary);">WanVideoProductions@gmail.com</a></p>
             <div class="spacer-sm"></div>
         	<p>Maybe I'll add some cool graphics here instead if the same old boring contact form.</p>
-		<div class="spacer-lg"></div>
+			<div class="spacer-lg"></div>
         </section>
     </main>
 
