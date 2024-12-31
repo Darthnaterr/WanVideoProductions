@@ -250,9 +250,32 @@
   .section-c {
         width: 100%;
         padding: 5rem 0; /* Remove horizontal padding */
-        border: 1px solid var(--accent);
-    	padding: 20px;
+    	/*padding: 20px;*/
+        position: relative;
+    	overflow: hidden;
     }
+    
+.section-a::before,
+.section-b::before,
+.section-c::before,
+.section-c::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--accent);
+}
+
+.section-a::before,
+.section-b::before,
+.section-c::before {
+    top: 0;
+}
+
+.section-c::after {
+    bottom: 0;
+}
   
   .section-a > *,
   .section-b > *,
@@ -262,6 +285,8 @@
         margin-right: auto;
         padding-left: 2rem;
         padding-right: 2rem;
+        position: relative; /* This ensures content stays above the border lines */
+    	z-index: 1;
     }  
   
     .section-a {
