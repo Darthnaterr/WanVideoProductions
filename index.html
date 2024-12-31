@@ -77,14 +77,14 @@
     overflow-x: hidden;
   }
   
-  	h1 {
-    	font-family: 'Waiting On The Bridge', serif;
-	}
+h1, h2 {
+    font-family: 'Waiting On The Bridge', serif;
+    font-weight: 300;
+}
 	
-    h2 {
-    	font-family: 'Waiting On The Bridge', serif;
-        font-size: 4rem;
-	}
+h2 {
+    font-size: 4rem;
+}
   
   .navbar {
     background-color: transparent !important;
@@ -213,11 +213,11 @@
   }
   
   .hero h1 {
-    font-family: 'Waiting On The Bridge', cursive, sans-serif;
     font-size: 5rem;
     color: #ffff;
     margin: 0;
-    /* transform: translateX(-85%) translateY(-50%);*/
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.3);
   }
   
   .hero p {
@@ -277,43 +277,43 @@
     bottom: 0;
 }
   
-  .section-a > *,
-  .section-b > *,
-  .section-c > * {
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        position: relative; /* This ensures content stays above the border lines */
-    	z-index: 1;
-    }  
+.section-a > *,
+.section-b > *,
+.section-c > * {
+	max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative; /* This ensures content stays above the border lines */
+    z-index: 1;
+}  
   
-    .section-a {
-    	background-color: var(--secondary);
-  }  
+.section-a {
+  	background-color: var(--secondary);
+}  
   
-    .section-b {
-    	background-color: var(--secondary);
-  }
+.section-b {
+  	background-color: var(--secondary);
+}
   
-    .section-c {
-    	background-color: var(--secondary);
-  }
+.section-c {
+   	background-color: var(--secondary);
+}
   
-  .section h2 {
+.section h2 {
     color: var(--dark);
     font-family: 'Waiting On The Bridge', cursive, sans-serif;
-  }
+}
   
-  .portfolio-grid {
+.portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
-  }
+}
   
-  .portfolio-item {
+.portfolio-item {
     position: relative;
     height: 300px;
     background-color: var(--accent);
@@ -321,7 +321,7 @@
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
+}
   
   .portfolio-item:hover {
     transform: translateY(-5px);
