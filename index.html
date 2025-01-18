@@ -287,7 +287,7 @@ h2 {
 }
   
 .section h2 {
-    color: var(--dark);
+    color: var(--light);
     font-family: 'Waiting On The Bridge', cursive, sans-serif;
 }
   
@@ -363,7 +363,150 @@ footer {
     background-color: var(--light);
     transition: all 0.3s ease;
 }
-    
+
+.section {
+    padding: 5rem 2rem;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--light);
+    text-align: center;
+}
+
+/* About Section Styles */
+.about-content {
+    display: grid;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    padding: 1.5rem;
+    background-color: var(--secondary);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+/* Services Section Styles */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    padding: 2rem;
+    background-color: var(--secondary);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.service-features {
+    margin-top: 1.5rem;
+    list-style-position: inside;
+}
+
+.service-features li {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Section Styles */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-info {
+    padding-right: 2rem;
+}
+
+.contact-info h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    margin-top: 2rem;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--secondary);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    color: var(--light);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: var(--accent);
+    color: var(--light);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
  @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -417,6 +560,19 @@ footer {
         transform: rotate(-45deg) translate(7px, -5px);
     }
     
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        padding-right: 0;
+    }
+    
+    .about-features,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
   }
 </style>
 
@@ -466,25 +622,108 @@ footer {
         </section>
 
         <section id="one" class="section-a" aria-label="About Us">
-            <h2>About</h2>
-            <div class="spacer-sm"></div>
-            <p>Don't worry. This section will be much more exciting once the website is finished.</p>
-            <div class="spacer-lg"></div>
+            <h2 class="section-title">About</h2>
+            <section id="about" class="section">
+                <div class="section-container">
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>At Wan Video Productions, we specialize in capturing life's most precious moments through the art of videography. With an eye for detail and a passion for storytelling, we transform ordinary moments into extraordinary memories.</p>
+                            <p>Founded on the principle that every story deserves to be told beautifully, we bring a unique blend of creativity and technical expertise to every project.</p>
+                        </div>
+                        <div class="about-features">
+                            <div class="feature">
+                                <h3>Experience</h3>
+                                <p>Years of professional videography expertise across various events and productions.</p>
+                            </div>
+                            <div class="feature">
+                                <h3>Quality</h3>
+                                <p>State-of-the-art equipment and professional editing techniques for stunning results.</p>
+                            </div>
+                            <div class="feature">
+                                <h3>Vision</h3>
+                                <p>Creative storytelling approach that captures the essence of your special moments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 	    </section>
         
         <section id="two" class="section-b" aria-label="Services">
-        	<h2>Services</h2>
-            <div class="spacer-sm"></div>
-        	<p>Wedding Videos. I like doing all kinds of videos but I'm trying to focus here.</p>
-			<div class="spacer-lg"></div>            
+        	<h2 class="section-title">Services</h2>
+            <section id="services" class="section">
+                <div class="section-container">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <h3>Wedding Videography</h3>
+                            <p>Capture your special day with our professional wedding videography services. We create beautiful, cinematic wedding films that tell your unique love story.</p>
+                            <ul class="service-features">
+                                <li>Full ceremony coverage</li>
+                                <li>Highlight reel</li>
+                                <li>Multiple camera angles</li>
+                            </ul>
+                        </div>
+                        <div class="service-card">
+                            <h3>Corporate Events</h3>
+                            <p>Professional video coverage for your corporate events, conferences, and promotional content. Make your business shine with high-quality video production.</p>
+                            <ul class="service-features">
+                                <li>Event documentation</li>
+                                <li>Interview sessions</li>
+                                <li>Marketing content</li>
+                            </ul>
+                        </div>
+                        <div class="service-card">
+                            <h3>Special Events</h3>
+                            <p>From birthdays to anniversaries, capture your special moments with professional videography that preserves your memories for years to come.</p>
+                            <ul class="service-features">
+                                <li>Event highlights</li>
+                                <li>Custom editing</li>
+                                <li>Quick turnaround</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>           
         </section>
         <section id="three" class="section-c" aria-label="Contact Information">
-			<h2>Contact</h2>
-            <div class="spacer-sm"></div>
-            <p>Email: <a href="mailto:WanVideoProductions@gmail.com" style="color: var(--light);">WanVideoProductions@gmail.com</a></p>
-            <div class="spacer-sm"></div>
-        	<p>Maybe I'll add some cool graphics here instead if the same old boring contact form.</p>
-			<div class="spacer-lg"></div>
+			<h2 class="section-title">Contact</h2>
+            <section id="contact" class="section">
+                <div class="section-container">
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <h3>Get In Touch</h3>
+                            <p>Ready to capture your special moments? Contact us to discuss your project.</p>
+                            <div class="contact-details">
+                                <p>Email: <a href="mailto:WanVideoProductions@gmail.com">WanVideoProductions@gmail.com</a></p>
+                                <p>Based in [Your Location]</p>
+                                <div class="social-links">
+                                    <!-- Your existing social media links -->
+                                </div>
+                            </div>
+                        </div>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <select id="service" name="service" required>
+                                    <option value="" disabled selected>Select Service</option>
+                                    <option value="wedding">Wedding Videography</option>
+                                    <option value="corporate">Corporate Event</option>
+                                    <option value="special">Special Event</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
 
