@@ -379,10 +379,15 @@ footer::before { /* Add a border before footer */
 
 .feature {
     padding: 2rem;
-    background-color: rgba(255,255,255,0.03); /* Very subtle background */
-    border-radius: 12px; /* More rounded corners */
-    border-left: 4px solid var(--accent); /* Accent border */
+    background-color: rgba(255,255,255,0.03); 
+    border-radius: 12px; 
+    border-left: 4px solid var(--accent); 
     transition: transform var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease);
+    /* Flex properties for when .about-features is a flex container (on desktop) */
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    flex-basis: 280px; /* Suggest an initial width */
+    max-width: 340px; /* Prevent items from becoming too wide */
 }
 
 .feature:hover {
@@ -620,8 +625,12 @@ footer .logo:hover img {
     .copyright {
         margin-top: 0; /* Reset margin if side-by-side */
     }
-    .about-features { /* Two columns for features on larger screens */
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .about-features { /* MODIFIED: For larger screens, use flexbox */
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; /* Center items, especially if one wraps */
+        gap: 1.5rem; 
+        /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); REMOVED */
     }
 }
 
@@ -760,8 +769,8 @@ footer .logo:hover img {
                 <h2 id="about-heading">About Us</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>At Wan Video Productions, we specialize in capturing life's most precious moments through the art of videography. With an eye for detail and a passion for storytelling, we transform ordinary events into extraordinary memories.</p>
-                        <p>Based in the heart of New England, we bring a unique blend of creativity, technical expertise, and local knowledge to every wedding and special event we film.</p>
+                        <p>At Wan Video Productions, we specialize in capturing life's most precious moments in motion. With an eye for detail and a passion for storytelling, we transform ordinary events into extraordinary memories.</p>
+                        <p>Based in Portland, Maine, we bring a unique blend of creativity, technical expertise, and a drive to stir emotion to every wedding and special event we film.</p>
                     </div>
                     <div class="about-features">
                         <div class="feature">
@@ -770,11 +779,11 @@ footer .logo:hover img {
                         </div>
                         <div class="feature">
                             <h3>Quality</h3>
-                            <p>State-of-the-art 4K equipment and advanced editing techniques for breathtaking, cinematic results.</p>
+                            <p>State-of-the-art equipment and advanced editing techniques for breathtaking, cinematic results.</p>
                         </div>
                         <div class="feature">
                             <h3>Vision</h3>
-                            <p>A creative, documentary-style approach that authentically captures the emotion and essence of your day.</p>
+                            <p>A creative approach that authentically captures the emotion and essence of your day.</p>
                         </div>
                     </div>
                 </div>
