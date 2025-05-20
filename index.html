@@ -5,133 +5,217 @@
     <link rel="icon" href="media/Logo/WVP-Light-Alpha.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wan Video Productions - Professional video production services">
+    <meta name="description" content="Wan Video Productions - Professional video production services for weddings and events in New England.">
     <title>New England Wedding Videographer | Wan Video Productions</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>	
-    <!--Barlow, Bodoni Moda, Italiana, Prata, Raleway, Cormorant Garamond, Nixie One, Lato-->
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Italiana&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nixie+One&family=Prata&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-   
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Italiana&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nixie+One&family=Prata&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
 <style>
-    
 :root {
-	--secondary: #353839;
-	--accent: #967c3a;
-	--light: #EEEEEE;
-	--dark: #1a1a1a;
-	--logo-color: var(--light);
-	--logo-hover-color: var(--secondary);
+    --primary: #121212; /* Slightly darker than original dark for more depth */
+    --secondary: #28282B; /* Adjusted for better contrast with primary */
+    --accent: #B08D57; /* Slightly desaturated gold for elegance */
+    --accent-hover: #c8a670; /* Lighter gold for hover */
+    --light: #F5F5F5; /* Off-white for softer feel */
+    --dark: #0D0D0D; /* Deepest dark for text on light backgrounds if needed */
+    --logo-color: var(--light);
+    --logo-hover-color: var(--accent);
+
+    --font-heading: 'Waiting On The Bridge', 'Cormorant Garamond', serif;
+    --font-body: 'Lato', 'Raleway', sans-serif;
+
+    --transition-speed: 0.4s;
+    --transition-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.logo svg {
-  	fill: var(--logo-color);
-  	transition: fill 0.3s ease;
+/* Custom Font Definition */
+@font-face {
+    font-family: 'Waiting On The Bridge';
+    src: url('/media/fonts/Waiting-on-the-Bridge.woff2') format('woff2'),
+         url('/media/fonts/Waiting-on-the-Bridge.woff') format('woff'),
+         url('/media/fonts/Waiting-on-the-Bridge.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-.logo:hover svg {
-  	fill: var(--logo-hover-color);
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base font size for rem units */
 }
 
-.spacer-sm { height: 50px; }
-.spacer-md { height: 100px; }
-.spacer-lg { height: 500px; }
-    
-@font-face {
-	font-family: 'Waiting On The Bridge';
-	src: url('/media/fonts/Waiting-on-the-Bridge.woff2') format('woff2'),
-		url('/media/fonts/Waiting-on-the-Bridge.woff') format('woff'),
-		url('/media/fonts/Waiting-on-the-Bridge.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-    
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-    
 body {
-	background-color: var(--dark);
-	color: var(--light);
-	font-family: 'Lato', sans-serif;
-	font-weight: 100;
-	overflow-x: hidden;
+    background-color: var(--primary);
+    color: var(--light);
+    font-family: var(--font-body);
+    font-weight: 300; /* Lighter weight for Lato */
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-  
-h1, h2 {
-	font-family: 'Waiting On The Bridge', serif;
-	font-weight: 300;
+
+/* Headings */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: normal; /* Custom font often has its own weight */
+    color: var(--light);
+    line-height: 1.2;
 }
-	
-h2 {
-	font-size: 4rem;
+
+h1 {
+    font-size: clamp(2.5rem, 5vw + 1rem, 5rem); /* Responsive font size */
+    text-shadow: 0 0 15px rgba(0,0,0,0.5); /* Softer shadow for headings */
 }
-  
+
+h2 { /* Section Titles */
+    font-size: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+    margin-bottom: 2.5rem; /* Increased margin */
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem; /* Space for underline */
+}
+
+/* Animated underline for H2 */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px; /* Width of the underline */
+    height: 3px; /* Thickness of the underline */
+    background-color: var(--accent);
+    border-radius: 2px;
+    transition: width var(--transition-speed) var(--transition-ease);
+}
+
+h2:hover::after {
+    width: 120px; /* Underline expands on hover */
+}
+
+h3 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* Navigation Bar */
 .navbar {
-	background-color: transparent !important;
-	padding: 1rem;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	z-index: 1000;
-	box-shadow: none !important;
+    background-color: transparent;
+    padding: 1.5rem 2rem; /* Increased padding */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color var(--transition-speed) ease, padding var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
-  
+
+.navbar.scrolled {
+    background-color: rgba(18, 18, 18, 0.95); /* Darker, slightly transparent */
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* More pronounced shadow */
+}
+
 .navbar-content {
-	max-width: 1200px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
+    max-width: 1300px; /* Slightly wider max-width */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-  
+
 .logo {
-    font-size: 1.8rem;
-    color: var(--light);
-    text-decoration: none;
-    font-weight: 300;
+    display: flex; /* For vertical alignment if text was next to SVG */
+    align-items: center;
 }
-  
-.logo img {
-    max-height: 50px;
+
+.logo img.logo-svg { /* Target the SVG specifically */
+    max-height: 55px; /* Slightly larger logo */
     width: auto;
+    fill: var(--logo-color); /* Ensure SVG fill can be controlled */
+    transition: fill var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.logo:hover img.logo-svg {
+    fill: var(--logo-hover-color);
+    transform: scale(1.05); /* Slight scale on hover */
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-  }
-    
+}
+
 .nav-links a {
     color: var(--light);
     text-decoration: none;
-    margin-left: 2rem;
+    margin-left: 2.5rem; /* Increased spacing */
     font-size: 1.1rem;
-    transition: color 0.3s ease;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5); /* Add this line */
+    font-weight: 400; /* Slightly bolder nav links */
+    position: relative; /* For underline animation */
+    padding: 0.5rem 0;
+    transition: color var(--transition-speed) ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-  
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent);
+    transition: width var(--transition-speed) var(--transition-ease);
+    border-radius: 1px;
+}
+
 .nav-links a:hover {
     color: var(--accent);
 }
-  
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
 .hero {
     height: 100vh;
+    min-height: 600px; /* Minimum height for smaller screens */
     display: flex;
     align-items: center;
-    justify-content: left;
-    background-color: var(--dark);
+    justify-content: flex-start; /* Align content to the left */
+    background-color: var(--dark); /* Fallback if video fails */
     position: relative;
     overflow: hidden;
+    padding-left: clamp(2rem, 8vw, 8rem); /* Responsive padding */
 }
-    
+
 #bg-video {
     position: absolute;
     top: 50%;
@@ -141,344 +225,240 @@ h2 {
     width: auto;
     height: auto;
     transform: translateX(-50%) translateY(-50%);
-    object-fit: contain;
+    object-fit: cover; /* Changed to cover for better full screen */
+    z-index: 0;
 }
 
-.overlay {
-    position: absolute; /* Position overlays absolutely */
-    left: 0; /* Align to the left */
-    right: 0; /* Align to the right */
-    background-color: rgb(26,26,26,1);
-}
-
-.overlay.top {
-    top: 0; /* Align to the top */
-    height: 20%; /* Adjust height as needed */
-}
-
-.overlay.top::after {
+/* Enhanced Overlay for Video Readability */
+.hero::before {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: var(--accent);
-    bottom: 0; /* Position at the bottom of the overlay */
-	left: 0; /* Ensure it starts from the left edge */
-}
-
-.overlay.bottom {
-    bottom: 0; /* Align to the bottom */
-    height: 20%; /* Adjust height as needed */
-}
-
-.overlay.bottom::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: var(--accent);
-}
-    
-.hero-content {
-    text-align: left;
-    z-index: 2;
-    padding: 2rem;
-    display: flex; /* Enable flexbox for layout */
-    flex-direction: column; /* Stack logo and text vertically by default */
-    align-items: flex-start; /* Align items to the left */    
-}
-  
-.hero-title-container {
-    display: flex; /* Arrange logo and h1 horizontally */
-    align-items: center; /* Vertically center logo and h1 */
-    margin-bottom: 1rem; /* Add spacing below the title */
-}
-  
-.hero-logo {
-    max-height: 300px; /* Adjust as needed */
-    margin-right: 1rem; /* Space between logo and text */
-    width: auto;
-}
-  
-.hero h1 {
-    font-size: 5rem;
-    color: #ffff;
-    margin: 0;
-}
-  
-.hero p {
-    font-size: 1.5rem;
-    color: #ffff;
-    margin-bottom: 2rem;
-}
-  
-.cta-button {
-    background-color: var(--accent);
-    color: var(--light);
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    /*margin-left: 0;*/
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-}
-  
-.cta-button:hover {
-    background-color: var(--secondary);
-}
-  
-.section-a,
-.section-b,
-.section-c {
-    width: 100%;
-    padding: 5rem 0; /* Remove horizontal padding */
-    /*padding: 20px;*/
-    position: relative;
-    overflow: hidden;
-}
-    
-.section-a::before,
-.section-b::before,
-.section-c::before,
-.section-c::after {
-    content: '';
-    position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-    height: 1px;
-    background-color: var(--accent);
-}
-
-.section-a::before,
-.section-b::before,
-.section-c::before {
-    top: 0;
-}
-
-.section-c::after {
     bottom: 0;
-}
-  
-.section-a > *,
-.section-b > *,
-.section-c > * {
-	max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    position: relative; /* This ensures content stays above the border lines */
+    background: linear-gradient(90deg, rgba(18,18,18,0.85) 0%, rgba(18,18,18,0.6) 40%, rgba(18,18,18,0.2) 100%); /* Gradient overlay */
     z-index: 1;
-}  
-  
-.section-a {
-  	background-color: var(--secondary);
-}  
-  
-.section-b {
-  	background-color: var(--secondary);
 }
-  
-.section-c {
-   	background-color: var(--secondary);
+
+
+.hero-content {
+    text-align: left;
+    z-index: 2; /* Above video and overlay */
+    position: relative; /* Needed for z-index */
+    max-width: 700px; /* Control width of text content */
+    animation: fadeInFromLeft 1s var(--transition-ease) forwards;
+    opacity: 0; /* Start hidden for animation */
 }
-  
-.section h2 {
+
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.hero-title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.hero-logo {
+    max-height: clamp(100px, 20vw, 200px); /* Responsive hero logo */
+    margin-right: 1.5rem;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)); /* Shadow for logo */
+}
+
+.hero h1 {
+    color: var(--light); /* Ensure hero h1 uses light color */
+}
+
+.hero p { /* Tagline */
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
     color: var(--light);
-    font-family: 'Waiting On The Bridge', cursive, sans-serif;
+    margin-bottom: 2.5rem;
+    max-width: 500px; /* Limit width of tagline */
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
-  
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-  
-.portfolio-item {
-    position: relative;
-    height: 300px;
+
+/* CTA Button */
+.cta-button {
     background-color: var(--accent);
-    overflow: hidden;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-  
-.portfolio-item:hover {
-    transform: translateY(-5px);
-}
-  
-footer {
-    background-color: var(--dark);
-    color: var(--light);
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-}
-  
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-  
-.social-links {
-    display: flex;
-    gap: 20px;
-}
-      
-.social-icon {
-    width: 24px;
-    height: 24px;
-    fill: var(--light);
-    transition: all 0.3s ease;
-}
-    
-.social-links a:hover .social-icon {
-    fill: var(--accent);
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
+    color: var(--dark); /* Dark text on gold for contrast */
+    padding: 0.9rem 2.2rem; /* Slightly larger padding */
     border: none;
-    background: none;
-    padding: 0.5rem;
+    border-radius: 50px; /* Pill shape button */
+    font-size: 1.1rem;
+    font-weight: 500; /* Bolder text */
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    letter-spacing: 0.5px;
 }
 
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px 0;
-    background-color: var(--light);
-    transition: all 0.3s ease;
+.cta-button:hover, .cta-button:focus {
+    background-color: var(--accent-hover);
+    transform: translateY(-3px) scale(1.03); /* Lift and slightly scale */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
+/* General Section Styling */
 .section {
-    padding: 5rem 2rem;
-    background-color: var(--dark);
-    color: var(--light);
+    padding: 5rem clamp(1rem, 5vw, 4rem); /* Responsive horizontal padding */
+    position: relative;
+    overflow: hidden; /* For animations */
+    background-color: var(--secondary); /* Default section background */
+}
+
+.section.alternate-bg {
+    background-color: var(--primary); /* For alternating section colors */
 }
 
 .section-container {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative; /* For z-index if needed */
+    z-index: 1;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--light);
-    text-align: center;
+/* Section Dividers (Subtler) */
+.section::before, .section::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Make it less than full width */
+    max-width: 1000px;
+    height: 1px;
+    background-color: rgba(176, 141, 87, 0.2); /* Softer accent color */
+}
+.section::before { top: 0; }
+.section::after { bottom: 0; }
+.hero + .section::before { display: none; } /* No top border for first section after hero */
+footer::before { /* Add a border before footer */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 1000px;
+    height: 1px;
+    background-color: rgba(176, 141, 87, 0.2);
 }
 
-/* About Section Styles */
+
+/* About Section */
 .about-content {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
     gap: 3rem;
-    margin-top: 2rem;
+    align-items: center; /* Vertically align content if columns have different heights */
 }
 
 .about-text {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     line-height: 1.8;
-}
-
-.about-text p {
-    margin-bottom: 1.5rem;
 }
 
 .about-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr; /* Single column for features on smaller screens */
+    gap: 1.5rem;
 }
 
 .feature {
-    padding: 1.5rem;
-    background-color: var(--secondary);
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    padding: 2rem;
+    background-color: rgba(255,255,255,0.03); /* Very subtle background */
+    border-radius: 12px; /* More rounded corners */
+    border-left: 4px solid var(--accent); /* Accent border */
+    transition: transform var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease);
 }
 
 .feature:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-.feature h3 {
-    color: var(--accent);
-    margin-bottom: 1rem;
-}
-
-/* Services Section Styles */
+/* Services Section */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly larger minmax */
+    gap: 2.5rem; /* Increased gap */
 }
 
 .service-card {
-    padding: 2rem;
-    background-color: var(--secondary);
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    padding: 2.5rem; /* Increased padding */
+    background-color: var(--primary); /* Match body for depth */
+    border-radius: 12px;
+    transition: transform var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease);
+    display: flex;
+    flex-direction: column; /* Ensure content flows top to bottom */
+    border: 1px solid rgba(176, 141, 87, 0.2); /* Subtle border */
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
 }
 
 .service-card h3 {
-    color: var(--accent);
-    margin-bottom: 1rem;
+    min-height: 3em; /* Ensure h3 takes up similar space */
 }
 
 .service-features {
     margin-top: 1.5rem;
-    list-style-position: inside;
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
 }
 
 .service-features li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    padding-left: 1.8em; /* Space for custom bullet */
+    position: relative;
+    font-size: 1rem;
 }
 
-/* Contact Section Styles */
+.service-features li::before { /* Custom bullet point */
+    content: '✓'; /* Checkmark or other icon */
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 600;
+}
+
+/* Contact Section */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+    align-items: flex-start; /* Align to top */
 }
 
-.contact-info {
-    padding-right: 2rem;
-}    
+.contact-info p {
+    margin-bottom: 1rem;
+}
 
 .contact-info a {
-    color: var(--accent);
-    text-decoration: none;
+    font-weight: 400;
 }
-
 .contact-info a:hover {
     text-decoration: underline;
 }
 
-.contact-info h3 {
-    color: var(--accent);
-    margin-bottom: 1rem;
-}
-
 .contact-details {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .contact-form {
@@ -492,60 +472,211 @@ footer {
     width: 100%;
     padding: 1rem;
     background-color: var(--secondary);
-    border: 1px solid var(--accent);
-    border-radius: 4px;
+    border: 1px solid transparent; /* Start with transparent border */
+    border-radius: 8px; /* Softer radius */
     color: var(--light);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(176, 141, 87, 0.3); /* Focus ring */
 }
 
 .form-group textarea {
-    height: 150px;
+    min-height: 150px;
     resize: vertical;
 }
 
-.submit-btn {
+.submit-btn { /* Re-style to match CTA */
     background-color: var(--accent);
-    color: var(--light);
-    padding: 1rem 2rem;
+    color: var(--dark);
+    padding: 0.9rem 2.2rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    letter-spacing: 0.5px;
+    justify-self: start; /* Align button to the left */
 }
 
-.submit-btn:hover {
-    opacity: 0.9;
+.submit-btn:hover, .submit-btn:focus {
+    background-color: var(--accent-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
- @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
+/* Footer */
+footer {
+    background-color: var(--primary); /* Darker footer */
+    color: var(--light);
+    padding: 3rem 2rem; /* Increased padding */
+    text-align: center; /* Center content by default */
+    position: relative; /* For the ::before pseudo-element */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack logo and links vertically on small screens */
+    align-items: center;
+    gap: 2rem; /* Space between logo and links */
+}
+
+.footer .logo img {
+    max-height: 60px; /* Footer logo size */
+    opacity: 0.8;
+    transition: opacity var(--transition-speed) ease;
+}
+.footer .logo:hover img {
+    opacity: 1;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem; /* Spacing for social icons */
+}
+
+.social-icon {
+    width: 28px; /* Larger icons */
+    height: 28px;
+    fill: var(--light);
+    transition: fill var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.social-links a:hover .social-icon {
+    fill: var(--accent);
+    transform: scale(1.15); /* Pop effect on hover */
+}
+
+.copyright {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: rgba(245, 245, 245, 0.7); /* Softer copyright text */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0.5rem;
+    z-index: 1005; /* Above nav links when closed */
+    position: relative; /* For absolute positioning of spans */
+}
+
+.hamburger span {
+    display: block;
+    width: 28px; /* Slightly larger */
+    height: 3px;
+    margin: 6px 0; /* Increased margin */
+    background-color: var(--light);
+    border-radius: 1px;
+    transition: all 0.35s var(--transition-ease);
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+
+/* Scroll Reveal Animations - Elements start hidden */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s var(--transition-ease), transform 0.8s var(--transition-ease);
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Responsive Adjustments */
+@media (min-width: 769px) { /* For larger screens, arrange footer items side-by-side */
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
     }
-    
+    .copyright {
+        margin-top: 0; /* Reset margin if side-by-side */
+    }
+    .about-features { /* Two columns for features on larger screens */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        padding-left: clamp(1rem, 5vw, 2rem); /* Adjust hero padding for mobile */
+        justify-content: center; /* Center hero content on mobile */
+        text-align: center; /* Center text inside hero content */
+    }
+    .hero-content {
+        align-items: center; /* Center items within hero content */
+        text-align: center;
+    }
+    .hero-title-container {
+        flex-direction: column; /* Stack logo and title on mobile */
+        align-items: center;
+    }
     .hero-logo {
-        max-height: 75px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        max-height: 120px;
     }
-    
+    .hero h1 {
+        text-align: center;
+    }
     .hero p {
-        font-size: 1.2rem;
+        margin-left: auto;
+        margin-right: auto;
     }
-    
+    .cta-button {
+        margin-left: auto;
+        margin-right: auto; /* Center button if it's the only element */
+        display: block; /* Make it block to center with auto margins */
+        width: fit-content; /* Shrink to content width */
+    }
+
     .hamburger {
         display: block;
-        z-index: 1001;
     }
-    
+
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: -100%; /* Start off-screen */
         height: 100vh;
-        width: 100%;
-        background-color: rgba(26, 26, 26, 0.98);
+        width: 80%; /* Don't take full width */
+        max-width: 350px; /* Max width for mobile nav */
+        background-color: var(--primary); /* Solid background */
+        box-shadow: -5px 0 25px rgba(0,0,0,0.3);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: right 0.3s ease;
-        padding: 2rem;
+        transition: right 0.4s var(--transition-ease);
+        padding-top: 5rem; /* Space for close button or logo */
     }
 
     .nav-links.active {
@@ -554,280 +685,324 @@ footer {
 
     .nav-links a {
         margin: 1.5rem 0;
-        font-size: 1.5rem;
+        font-size: 1.4rem; /* Larger text for mobile nav */
+    }
+    .nav-links a::after { /* Make underline more prominent on mobile */
+        height: 3px;
     }
 
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(8px, 6px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -5px);
-    }
-    
     .contact-content {
         grid-template-columns: 1fr;
     }
-    
     .contact-info {
         padding-right: 0;
+        margin-bottom: 2rem; /* Space before form */
     }
-    
-    .about-features,
+    .submit-btn {
+        justify-self: stretch; /* Full width button on mobile */
+        text-align: center;
+    }
+
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column for services on mobile */
+    }
+    .service-card h3 {
+        min-height: auto; /* Reset min-height for mobile */
     }
 
-  }
-</style>
+    .section {
+        padding: 4rem clamp(1rem, 5vw, 2rem);
+    }
+    h2 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+}
 
+</style>
 </head>
 
 <body>
     <header>
         <nav class="navbar" aria-label="Main navigation">
             <div class="navbar-content">
-                <a href="https://wanvideoproductions.com/" class="logo">
+                <a href="https://wanvideoproductions.com/" class="logo" aria-label="Wan Video Productions Home">
                     <img src="media/Logo/WVP-Light-Alpha.svg" alt="Wan Video Productions Logo" class="logo-svg">
                 </a>
-            	<button class="hamburger" aria-label="Menu">
-                	<span></span>
-                	<span></span>
-                	<span></span>
-            	</button>                
-                <div class="nav-links">
+                <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links-mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-links" id="nav-links-mobile">
                     <a href="#home">Home</a>
-                    <a href="#one">About</a>
-                    <a href="#two">Service</a>
-                    <a href="#three">Contact</a>
-                    <!--  <a href="https://wanvideoproductions.com/about">About</a>
-          			<a href="https://wanvideoproductions.com/services">Services</a>
-          			<a href="https://wanvideoproductions.com/contact">Contact</a> -->
-                </div>
+                    <a href="#about-section">About</a>
+                    <a href="#services-section">Services</a> <a href="#contact-section">Contact</a> </div>
             </div>
         </nav>
     </header>
 
     <main>
         <section class="hero" id="home">
-            <div class="video-wrapper">  
-                <video autoplay loop muted playsinline id="bg-video" aria-hidden="true">
-                    <source src="media/background-video.mp4" type="video/mp4">
-                </video>
-                <div class="overlay top"></div>
-                <div class="overlay bottom"></div>
-            </div>
+            <video autoplay loop muted playsinline id="bg-video" aria-hidden="true" poster="media/poster-image.jpg"> <source src="media/background-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <div class="hero-content">
-                <div class="hero-title-container"> 
-                	<img src="media/Logo/WVP-Light-Alpha.svg" alt="Wan Video Productions Logo" class="hero-logo logo-svg">
-                	<h1>Video Productions</h1>
+                <div class="hero-title-container">
+                    <img src="media/Logo/WVP-Light-Alpha.svg" alt="" class="hero-logo logo-svg" aria-hidden="true"> <h1>Video Productions</h1>
                 </div>
-                <p>Capturing Moments for Timeless Memories</p>
+                <p>Capturing Moments for Timeless Memories in New England</p>
+                <a href="#contact-section" class="cta-button">Get a Quote</a>
             </div>
         </section>
 
-        <section id="one" class="section-a" aria-label="About Us">
-            <h2 class="section-title">About</h2>
-            <section id="about" class="section">
-                <div class="section-container">
-                    <div class="about-content">
-                        <div class="about-text">
-                            <p>At Wan Video Productions, we specialize in capturing life's most precious moments through the art of videography. With an eye for detail and a passion for storytelling, we transform ordinary moments into extraordinary memories.</p>
-                            <p>Founded on the principle that every story deserves to be told beautifully, we bring a unique blend of creativity and technical expertise to every project.</p>
+        <section id="about-section" class="section scroll-reveal" aria-labelledby="about-heading">
+            <div class="section-container">
+                <h2 id="about-heading">About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>At Wan Video Productions, we specialize in capturing life's most precious moments through the art of videography. With an eye for detail and a passion for storytelling, we transform ordinary events into extraordinary memories.</p>
+                        <p>Based in the heart of New England, we bring a unique blend of creativity, technical expertise, and local knowledge to every wedding and special event we film.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature">
+                            <h3>Experience</h3>
+                            <p>Years of professional videography expertise, specializing in New England weddings and scenic storytelling.</p>
                         </div>
-                        <div class="about-features">
-                            <div class="feature">
-                                <h3>Experience</h3>
-                                <p>Years of professional videography expertise across various events and productions.</p>
-                            </div>
-                            <div class="feature">
-                                <h3>Quality</h3>
-                                <p>State-of-the-art equipment and professional editing techniques for stunning results.</p>
-                            </div>
-                            <div class="feature">
-                                <h3>Vision</h3>
-                                <p>Creative storytelling approach that captures the essence of your special moments.</p>
-                            </div>
+                        <div class="feature">
+                            <h3>Quality</h3>
+                            <p>State-of-the-art 4K equipment and advanced editing techniques for breathtaking, cinematic results.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Vision</h3>
+                            <p>A creative, documentary-style approach that authentically captures the emotion and essence of your day.</p>
                         </div>
                     </div>
                 </div>
-            </section>
-	    </section>
-        
-        <section id="two" class="section-b" aria-label="Services">
-        	<h2 class="section-title">Services</h2>
-            <section id="services" class="section">
-                <div class="section-container">
-                    <div class="services-grid">
-                        <div class="service-card">
-                            <h3>Ceremonial $1900</h3>
-                            <p>Cherish the vows and heartfelt moments of your ceremony forever with our professional recording and a beautifully edited highlights reel.</p>
-                            <ul class="service-features">
-                                <li>Full ceremony coverage</li>
-                                <li>Single videographer with an additional unmanned camera</li>
-                                <li>1080p Highlight video. 1-3 mins</li>
-                            </ul>
-                        </div>
-                        <div class="service-card">
-                            <h3>Storytelling $3000</h3>
-                            <p>Experience your wedding day again and again with our captivating video that captures all the key moments and tells the unique story of your love.</p>
-                            <ul class="service-features">
-                                <li>Pre-Ceremony coverage</li>
-                                <li>Full Ceremony coverage</li>
-                                <li>Reception coverage</li>
-                                <li>2 Videographers with an additional unmanned camera</li>
-                                <li>4K UHD Wedding Events video. 3-5 mins</li>
-                            </ul>
-                        </div>
-                        <div class="service-card">
-                            <h3>Cinematic $4000</h3>
-                            <p>Indulge in a truly cinematic masterpiece. Our expert videographers will create a stunning film that beautifully captures the emotion, artistry, and magic of your wedding day.</p>
-                            <ul class="service-features">
-                                <li>Pre-Ceremony coverage</li>
-                                <li>Full Ceremony coverage</li>
-                                <li>Reception coverage</li>
-                                <li>Second Location</li>
-                                <li>2 Videographers with an additional unmanned camera</li>
-                                <li>4K UHD Wedding Events video. 5-7 mins</li>
-                                <li>Full Ceremony Video. (1 Angle)</li>
-                                <li>Speeches</li>
-                            </ul>
-                        </div>
-                        <div class="service-card">
-                            <h3>Add Ons</h3>
-                            <p></p>
-                            <ul class="service-features">
-                                <li>Drone Footage: $700</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>           
+            </div>
         </section>
-        <section id="three" class="section-c" aria-label="Contact Information">
-			<h2 class="section-title">Contact</h2>
-            <section id="contact" class="section">
-                <div class="section-container">
-                    <div class="contact-content">
-                        <div class="contact-info">
-                            <h3>Get In Touch</h3>
-                            <p>Ready to capture your special moments? Contact us to discuss your project.</p>
-                            <div class="contact-details">
-                                <p>Email: <a href="mailto:WanVideoProductions@gmail.com">WanVideoProductions@gmail.com</a></p>
-                                <p>Based in Maine</p>
-                                <div class="social-links">
-                                    <Your existing social media links>
-                                </div>
-                            </div>
-                        </div>
-                        <!--form class="contact-form">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="form-group">
-                                <select id="service" name="service" required>
-                                    <option value="" disabled selected>Select Service</option>
-                                    <option value="wedding">Wedding Videography</option>
-                                    <option value="special">Special Event</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                            </div>
-                            <button type="submit" class="submit-btn">Send Message</button>
-                        </form-->
+
+        <section id="services-section" class="section alternate-bg scroll-reveal" aria-labelledby="services-heading">
+            <div class="section-container">
+                <h2 id="services-heading">Our Wedding Packages</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Ceremonial Package</h3>
+                        <p class="price-display" style="font-size: 1.3em; color: var(--accent); margin-bottom: 1em; font-weight: 500;">$1900</p>
+                        <p>Cherish the vows and heartfelt moments of your ceremony forever with our professional recording and a beautifully edited highlights reel.</p>
+                        <ul class="service-features">
+                            <li>Full ceremony coverage</li>
+                            <li>Single videographer, multiple camera angles</li>
+                            <li>1080p Highlight video (1-3 mins)</li>
+                            <li>Professional audio recording</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Storytelling Package</h3>
+                         <p class="price-display" style="font-size: 1.3em; color: var(--accent); margin-bottom: 1em; font-weight: 500;">$3000</p>
+                        <p>Experience your wedding day again and again with our captivating video that captures all the key moments and tells the unique story of your love.</p>
+                        <ul class="service-features">
+                            <li>Pre-Ceremony & Ceremony coverage</li>
+                            <li>Reception highlights (up to 3 hours)</li>
+                            <li>Two videographers for dynamic coverage</li>
+                            <li>4K UHD Wedding Film (3-5 mins)</li>
+                            <li>Drone footage (weather/location permitting)</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Cinematic Package</h3>
+                         <p class="price-display" style="font-size: 1.3em; color: var(--accent); margin-bottom: 1em; font-weight: 500;">$4000</p>
+                        <p>Indulge in a truly cinematic masterpiece. Our expert team will create a stunning film that beautifully captures the emotion, artistry, and magic of your wedding day.</p>
+                        <ul class="service-features">
+                            <li>Full Day Coverage (Pre-Ceremony to major Reception events)</li>
+                            <li>Two videographers, multiple cameras</li>
+                            <li>4K UHD Cinematic Wedding Film (5-7 mins)</li>
+                            <li>Full Ceremony Edit (multi-angle)</li>
+                            <li>Full Speeches Edit</li>
+                            <li>Premium Drone Footage</li>
+                            <li>Social Media Teaser Clip</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Optional Add-Ons</h3>
+                        <p>Customize your package to perfectly suit your needs.</p>
+                        <ul class="service-features">
+                            <li>Additional Hours of Coverage: $300/hr</li>
+                            <li>Raw Footage (on hard drive): $500</li>
+                            <li>Love Story / Engagement Film: $800</li>
+                            <li>Same-Day Edit: $1200</li>
+                            <li>Documentary Edit (longer form): Starting at $1000</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+
+        <section id="contact-section" class="section scroll-reveal" aria-labelledby="contact-heading">
+            <div class="section-container">
+                <h2 id="contact-heading">Let's Create Together</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>Ready to capture your special moments? We'd love to hear about your plans. Contact us to discuss your wedding or event videography needs and receive a personalized quote.</p>
+                        <div class="contact-details">
+                            <p><strong>Email:</strong> <a href="mailto:WanVideoProductions@gmail.com">WanVideoProductions@gmail.com</a></p>
+                            <p><strong>Phone:</strong> <a href="tel:+12075551234">(207) 555-1234</a> <span style="font-size: 0.8em; opacity: 0.7;">(Example)</span></p>
+                            <p>Proudly serving Maine, New Hampshire, Massachusetts, and all of New England.</p>
+                            <div class="social-links" style="margin-top: 1.5rem;">
+                                <a href="https://www.instagram.com/wanvideoproductions" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c-3.074 0-3.45.012-4.652.068-1.192.056-2.014.244-2.732.526-.744.292-1.364.712-1.988 1.336-.624.624-1.044 1.244-1.336 1.988-.282.718-.47 1.54-.526 2.732-.056 1.202-.068 1.578-.068 4.652s.012 3.45.068 4.652c.056 1.192.244 2.014.526 2.732.292.744.712 1.364 1.336 1.988.624.624 1.244 1.044 1.988 1.336.718.282 1.54.47 2.732.526 1.202.056 1.578.068 4.652.068s3.45-.012 4.652-.068c1.192-.056 2.014-.244 2.732-.526.744-.292 1.364-.712 1.988-1.336.624-.624 1.044-1.244 1.336-1.988.282-.718.47-1.54.526-2.732.056-1.202.068-1.578.068-4.652s-.012-3.45-.068-4.652c-.056-1.192-.244-2.014-.526-2.732-.292-.744-.712-1.364-1.336-1.988-.624-.624-1.244-1.044-1.988-1.336-.718-.282-1.54-.47-2.732-.526C15.45.012 15.074 0 12 0zm0 2.16c3.004 0 3.36.01 4.534.064 1.084.05 1.752.222 2.26.414.552.204.952.484 1.37.904.416.416.696.816.904 1.37.192.508.364 1.176.414 2.26.055 1.175.066 1.53.066 4.535s-.01 3.36-.066 4.535c-.05 1.084-.222 1.752-.414 2.26-.204.552-.484.952-.904 1.37-.416.416-.816.696-1.37.904-.508.192-1.176.364-2.26.414-1.175.055-1.53.066-4.535.066s-3.36-.01-4.535-.066c-1.084-.05-1.752-.222-2.26-.414-.552-.204-.952-.484-1.37-.904-.416-.416-.696-.816-.904-1.37-.192-.508-.364-1.176-.414-2.26-.055-1.175-.066-1.53-.066-4.535s.01-3.36.066-4.535c.05-1.084.222-1.752.414-2.26.204-.552.484-.952.904-1.37.416-.416.816-.696 1.37-.904.508-.192 1.176-.364 2.26-.414C8.64.01 8.996 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                </a>
+                                </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST"> <div class="form-group">
+                            <label for="name" class="sr-only">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                             <label for="phone" class="sr-only">Your Phone (Optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone (Optional)">
+                        </div>
+                        <div class="form-group">
+                            <label for="event_date" class="sr-only">Event Date (Optional)</label>
+                            <input type="date" id="event_date" name="event_date" placeholder="Event Date (Optional)">
+                        </div>
+                        <div class="form-group">
+                            <label for="service" class="sr-only">Service of Interest</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select Service of Interest</option>
+                                <option value="ceremonial">Ceremonial Package</option>
+                                <option value="storytelling">Storytelling Package</option>
+                                <option value="cinematic">Cinematic Package</option>
+                                <option value="custom">Custom Request / Not Sure</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="sr-only">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your event..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-                <a href="https://wanvideoproductions.com/" class="logo">
-                    <img src="media/Logo/WVP-Light-Long-Alpha.png">
-                </a>
+            <a href="https://wanvideoproductions.com/" class="logo" aria-label="Wan Video Productions Home">
+                <img src="media/Logo/WVP-Light-Long-Alpha.png" alt="Wan Video Productions Full Logo">
+            </a>
             <div class="social-links">
-                <a href="https://www.instagram.com/wanvideoproductions" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
+                <a href="https://www.instagram.com/wanvideoproductions" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                     <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c-3.074 0-3.45.012-4.652.068-1.192.056-2.014.244-2.732.526-.744.292-1.364.712-1.988 1.336-.624.624-1.044 1.244-1.336 1.988-.282.718-.47 1.54-.526 2.732-.056 1.202-.068 1.578-.068 4.652s.012 3.45.068 4.652c.056 1.192.244 2.014.526 2.732.292.744.712 1.364 1.336 1.988.624.624 1.244 1.044 1.988 1.336.718.282 1.54.47 2.732.526 1.202.056 1.578.068 4.652.068s3.45-.012 4.652-.068c1.192-.056 2.014-.244 2.732-.526.744-.292 1.364-.712 1.988-1.336.624-.624 1.044-1.244 1.336-1.988.282-.718.47-1.54.526-2.732.056-1.202.068-1.578-.068-4.652s-.012-3.45-.068-4.652c-.056-1.192-.244-2.014-.526-2.732-.292-.744-.712-1.364-1.336-1.988-.624-.624-1.244-1.044-1.988-1.336-.718-.282-1.54-.47-2.732-.526C15.45.012 15.074 0 12 0zm0 2.16c3.004 0 3.36.01 4.534.064 1.084.05 1.752.222 2.26.414.552.204.952.484 1.37.904.416.416.696.816.904 1.37.192.508.364 1.176.414 2.26.055 1.175.066 1.53.066 4.535s-.01 3.36-.066 4.535c-.05 1.084-.222 1.752-.414 2.26-.204.552-.484.952-.904 1.37-.416.416-.816.696-1.37.904-.508.192-1.176.364-2.26.414-1.175.055-1.53.066-4.535.066s-3.36-.01-4.535-.066c-1.084-.05-1.752-.222-2.26-.414-.552-.204-.952-.484-1.37-.904-.416-.416-.696-.816-.904-1.37-.192-.508-.364-1.176-.414-2.26-.055-1.175-.066-1.53-.066-4.535s.01-3.36.066-4.535c.05-1.084.222-1.752.414-2.26.204-.552.484-.952.904-1.37.416-.416.816-.696 1.37.904.508-.192 1.176-.364 2.26.414C8.64.01 8.996 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
-                <!--a href="https://www.linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                </a-->
-                <!--a href="https://www.tiktok.com/@yourcompany" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                    </svg>
-                </a-->
-                <!--a href="https://www.youtube.com/channel/yourcompany" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                </a-->
-            </div>
+                </div>
+             <p class="copyright">&copy; <span id="currentYear"></span> Wan Video Productions. All Rights Reserved. <br> New England Wedding Videographer based in Maine.</p>
         </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const navbar = document.querySelector('.navbar');
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-            const links = document.querySelectorAll('.nav-links a');
-            let ticking = false;
-            
-            window.addEventListener('scroll', function() {
-                if (!ticking) {
-                    window.requestAnimationFrame(function() {
-                        if (window.scrollY > 50) {
-                            navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.98)';
-                            navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
-                        } else {
-                            navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
-                            navbar.style.boxShadow = 'none';
-                        }
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
-            });
-        
-            // New hamburger menu code
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
-                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-            });
-        
-            links.forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                    document.body.style.overflow = '';
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.querySelector('.navbar');
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinksAnchors = document.querySelectorAll('.nav-links a');
+        let scrollTicking = false;
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            if (!scrollTicking) {
+                window.requestAnimationFrame(function() {
+                    if (window.scrollY > 70) { // Threshold for scrolled navbar
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                    scrollTicking = false;
                 });
-            });
-        
-            document.addEventListener('click', (e) => {
-                if (!hamburger.contains(e.target) && 
-                    !navLinks.contains(e.target) && 
-                    navLinks.classList.contains('active')) {
+                scrollTicking = true;
+            }
+        });
+
+        // Hamburger menu toggle
+        hamburger.addEventListener('click', () => {
+            const isActive = hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isActive);
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        });
+
+        // Close mobile nav when a link is clicked
+        navLinksAnchors.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
                     hamburger.classList.remove('active');
                     navLinks.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
                     document.body.style.overflow = '';
                 }
             });
         });
+
+        // Close mobile nav when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') &&
+                !hamburger.contains(e.target) &&
+                !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Scroll Reveal Animations
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Optional: stop observing once visible
+                }
+            });
+        }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+        scrollRevealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Update copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scroll for anchor links (if not handled by CSS scroll-behavior)
+        // This can be more robust than just CSS scroll-behavior in some browsers
+        // and allows for offsets if you have a fixed header.
+        navLinksAnchors.forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#') && href.length > 1) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        const navbarHeight = navbar.offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+    });
     </script>
 </body>
 </html>
