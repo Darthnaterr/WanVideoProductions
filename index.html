@@ -828,6 +828,15 @@ footer .logo:hover img {
     }
 }
 
+.image {
+    display: block; /* Ensures the image behaves correctly */
+    width: 100%; /* Makes the image responsive to fill the column */
+    height: auto; /* Maintains the image's aspect ratio */
+    border-radius: 12px; /* Matches the rounded corners of your feature cards */
+    margin-bottom: 2rem; /* Adds nice spacing between the image and the text below */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Optional: adds a subtle shadow like other elements */
+}
+
 </style>
 </head>
 
@@ -871,6 +880,7 @@ footer .logo:hover img {
                 <h2 id="about-heading">About Us</h2>
                 <div class="about-content">
                     <div class="about-text">
+                    	<img src="media/images/wan_wedding639-2868854412-o_51551956755_o.jpg" alt="A photo of the Wan Video Productions videographer" class="image">
                         <p>At Wan Video Productions, we specialize in capturing life's most precious moments in motion. With an eye for detail and a passion for storytelling, we transform ordinary events into extraordinary memories.</p>
                         <p>Based in Portland, Maine, we bring a unique blend of creativity, technical expertise, and a drive to stir emotion to every wedding and special event we film.</p>
                     </div>
@@ -983,6 +993,7 @@ footer .logo:hover img {
                                 </div>
                         </div>
                     </div>
+                    <img src="media/images/wan_wedding669-2868856081-o_51551756979_o.jpg" alt="A photo of the Rings to Rule them All" class="image">
                     <!--<form class="contact-form" action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST"> <div class="form-group">
                             <label for="name" class="sr-only">Your Name</label>
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
