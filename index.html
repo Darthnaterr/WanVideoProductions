@@ -383,33 +383,39 @@ footer::before { /* Add a border before footer */
 /* About Section */
 .about-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    /* Creates a responsive two-column layout. It will stack to one column on smaller screens. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
-    align-items: center; /* Vertically align content if columns have different heights */
+    align-items: center; /* This vertically aligns the text and the group of cards */
 }
 
 .about-text {
+    /* Resets text to be left-aligned within its column */
     font-size: 1.15rem;
     line-height: 1.8;
+    text-align: left;
+    max-width: none;
+    margin: 0;
 }
 
 .about-features {
     display: grid;
-    grid-template-columns: 1fr; /* Single column for features on smaller screens */
-    gap: 1.5rem;
+    /* This is the only rule needed for this element. It forces the cards into a single vertical column regardless of screen size. */
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* This creates space between the stacked cards */
 }
 
 .feature {
     padding: 2rem;
-    background-color: rgba(255,255,255,0.03); /* Very subtle background */
-    border-radius: 12px; /* More rounded corners */
-    border-left: 4px solid var(--accent); /* Accent border */
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border-left: 4px solid var(--accent);
     transition: transform var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease);
 }
 
 .feature:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Services Section */
@@ -641,9 +647,6 @@ footer .logo:hover img {
     }
     .copyright {
         margin-top: 0; /* Reset margin if side-by-side */
-    }
-    .about-features { /* Two columns for features on larger screens */
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
 
